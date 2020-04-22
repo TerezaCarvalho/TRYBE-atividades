@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* Manipulando os itens(elementos filhos) atravéz dos containers
+posicionamento de itens flexíveis nos contêineres pai */
+
+.menu-container{ /* Div que contem a div menu*/
+    display: flex;
+    /* Ao atribuir um valor de flex, estamos dizendo ao navegador que tudo na caixa deve ser
+     renderizado com flexbox em vez do modelo de caixa padrão.*/
+    color: #fff;
+    /* o innerHTML das divs filhas aparecem de branco*/
+    background-color: #5995DA;
+    padding: 20PX 0;
+    justify-content: center;/* a div pai manipula a divMenu que é filha,
+    a div menu poderia ter recebido um "margin 0 auto" que é a mesma coisa.
+    justify-content: center
+                    flex-start
+                    flex-end
+                    space-around
+                    space-between;*/ 
+}
+
+.menu{
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;/* *** */
+    justify-content: space-between;
+}
+
+.links{
+    border: 1px solid #fff;  /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup{
+    margin-right: 20px;
+}
+
+.header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/*
+     center
+    flex-start   (topo)
+    flex-end      (inferior)
+    stretch
+    baseline*/
+
+  }
+  /* PARA VISUALIZAR A PROPRIEDADE ALIGN-ITEMS:STRETCH; EM .header
+.social,
+.logo,
+.subscribe {
+  border: 1px solid #5995DA;
+}*/
+.photo-grid-container{
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid{
+    width: 900px;
+    display: flex;
+   /* justify-content: flex-start;*/
+   justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+  }
+
+  .first-item {
+    order: 1;
+  }
+  
+  .last-item {
+    order: -1;
+  }
+
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+}
+/*.footer-three {
+    flex: 2;
+}*/
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
+
+.signup {
+    margin-left: auto;
+}
+/* 
+Use display: flex;para criar um contêiner flexível.
+Use justify-contentpara definir o alinhamento horizontal de itens.
+Use align-itemspara definir o alinhamento vertical dos itens.
+Use flex-directionse você precisar de colunas em vez de linhas.
+Use os valores row-reverseou column-reversepara inverter a ordem dos itens.
+Use orderpara personalizar a ordem dos elementos individuais.
+Use align-selfpara alinhar verticalmente itens individuais.
+Use flexpara criar caixas flexíveis que podem se esticar e encolher.
+*/
+
