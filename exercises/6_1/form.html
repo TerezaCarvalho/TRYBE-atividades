@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form Trybe - 6.1</title>
+     <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+               <div id='nome'> Nome: <input name = "nome" required="required" maxlength="40" type="text"></div>
+                <div id='e-mail'>E-mail: <input name = "e-mail" id="email" required="required" maxlength="50" type="text"></div>
+                <div id="CPF">CPF (apenas números): <input name = "CPF" required="required" type="text" maxlength="11"></div>
+                <div id="Endereço">Endereço: <input name = "endereco" required="required" type="text" maxlength="200"></div>
+                <div id="cidade">Cidade: <input name = "cidade" required="required" type="text" maxlength="28"></div>
+                <div id="Estado">Estado: <select id='estado' name='estado' onclick=""></select></div>
+               
+                <div id="tipoResidencia">
+                <legend>Você reside em casa ou apartamento?</legend>
+                <label for=casa1><input name='casa' id='casa1' value='casa' type='radio'required='required'>Casa</label>
+                <label for=casa2><input name='apartamento' id='casa2' value='apartamento' type='radio' required='required'>Apartamento</label>
+                </div>
+        </fieldset>
+    
+        <div id = 'profissionais'>
+        <fieldset>
+            <legend>Informações profissionais</legend>
+                <label for='Resumo-currículo'>Resuma seu Currículo (limite de 1000 caracteres).</label><br>
+                <textarea class = 'caixatexto' name='curriculo' maxlength="1000"></textarea><br><br>
+                Cargo: <input name = "cargo1" required="required" maxlength="40" type="text"><br><br>
+                Atribuições do cargo:<textarea id = 'caixatexto' name='resumo-cargo1' maxlength="500"></textarea><br><br>
+                Data de entrada (dd/mm/aaaa): <input id = 'data-entrada' required="required" name='data-entrada' maxlength="10"></input>
+     
+        </fieldset>
+        <div id="envia-dados">
+            <button type="submit" id="enviar">Cadastrar</button>
+        </div>
+    </form>
+   
+   
+    <script src="script.js"></script>
+</body>
+
+</html>
