@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+  
+ <div id="story"></div>
+
+ <script>
+     /* exercíco1:
+     Adicionar um evento ao botao que ao clicado ele chame uma funcão chamada makeMadLib ou 
+     criar uma funçao ao evento ( confuso).
+     Na makeMadLib */
+
+     window.onload = function(){
+
+        function makeMadLib(){ // essa funcao pega os valores dos imputs fazer uma historia pra eles e mostrá-las numa div
+           
+           let nome = document.querySelector("#noun").value; // pega o valor que o usuario digitar e armazena na variável (no console.log mostra o valor)
+           let adjetivo = document.querySelector("#adjective").value; // sem o .value pega a linha 13 de código no console.log
+           let pessoa = document.querySelector("#person").value;
+           let div_da_historia = document.querySelector("#story").innerHTML= nome +" " + adjetivo + "  "+ pessoa;
+          
+           console.log(div_da_historia);
+        }
+
+        let botao = document.getElementById("lib-button");
+            botao.addEventListener('click', makeMadLib);  // aqui chamei a funcao makemadLIB quando o botao é clicado.
+     }
+    
+     
+
+ </script>
+  
+ </body>
+</html>
