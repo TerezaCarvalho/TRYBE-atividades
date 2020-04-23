@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício4_7</title>
+    <style>
+
+        body{
+          margin: o;
+          padding: o;
+          color: midnightblue;
+          font-family:'Open Sans',Arial,sans-serif;  ;
+        }
+        #title{
+            text-align: center;
+        }
+
+        .container{
+
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: large;
+            letter-spacing:1px;
+            padding-left: 10px;
+            padding-right:10px ;
+            padding-top: 20px;
+            height: 340px;
+            
+        }
+
+        .div{
+            padding: 50px 50px 50px 50px;
+        }
+
+        footer{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1 id="title">Lorem Ipsum</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <article>
+        <section>
+            <div id="container" class="container">
+            <h2>  O que é Lorem Ipsum?  </h2>
+            <p>Lorem Ipsum é um texto de demonstração simples para a indústria de impressão e fonte. 
+                Lorem Ipsum é o texto de demonstração padrão no setor desde 1500, quando um escritor 
+                desconhecido pegou algumas palavras e as misturou para criar um livro de exemplo.
+            </p>
+            <h2>Por que usamos?</h2>
+            <p> É um fato estabelecido há muito tempo que um leitor se distrai do texto quando olha para 
+                um layout. O ponto de usar Lorem Ipsum é que é mais ou menos o arranjo normal das letras e, 
+                portanto, parece uma linguagem legível. Muitos editores de desktop e editores da Web agora usam 
+                Lorem Ipsum como texto padrão, e pesquisar na Internet por "lorem ipsum" também torna muitos
+                 sites visíveis onde quer que ainda apareçam. Agora existem várias versões do Lorem Ipsum, 
+                 algumas aleatórias, outras conscientes (influenciadas pela inteligência e pelo seu próprio gosto)
+
+            </p>
+        </div>
+        </section>
+        <!--    Cor de fundo da tela;
+                Cor do texto;
+                Tamanho da fonte;
+                Espaçamento entre as linhas do texto;
+                Tipo da fonte (Font family).    -->
+        <div>
+
+            <div id="divcorDeFundo">
+                <h3>Escolha a cor da página</h3>
+                <!-- MB : corTexto =>backgroundColor -->
+                <button class="backgroundColor">pink</button> 
+                <button class="backgroundColor">gold</button>
+                 <button class="backgroundColor">blue</button>
+​
+
+            </div>
+            <div id="divTextColor">
+                <h3>Escolha a cor do texto</h3>
+                <button class="color">magenta</button>
+                <button class="color">navy</button>
+                <button class="color">purple</button>
+            </div>
+            <div id="divFontSize">
+                <h3>Escolha o Tamanho da fonte</h3>
+                <button class="fontSize">Larger</button>
+                <button class="fontSize">x-small</button>
+                <button class="fontSize">medium</button>
+            </div>
+            <div id="divChooseFont">
+                <h3>Escolha o tipo de fonte</h3>
+                <button class="font-family">Georgia</button>
+                <button class="font-family">Times New Roman</button>
+                <button class="font-family">Helvetica</button>
+            </div>
+
+        </div>
+        
+
+    </article>
+    <footer >
+        <span>Alemão - Robin Ebers</span>
+    </footer>
+
+    <script>
+
+        // EXERCICIO MATHIEU
+        window.onload=function(){
+
+        let buttons = document.querySelectorAll("button");
+
+
+            for(let i=0;i<buttons.length;i++) { 
+            //for que percorre todos os botões para armazenar e configurar o valor das classes no localstorage
+
+                let valorClasseBotoes = buttons[i].className; // armazena nomes das classes numa variável
+
+                let valorEstiloLocalStorage = localStorage.getItem(valorClasseBotoes);  // no parametro contem o nome da chave cujo valor vc quer obter
+            // O método getItem () retorna o valor do item especificado do Objeto de Armazenamento.
+
+        
+                if (typeof valorClasseBotoes !== 'undefined' && valorClasseBotoes !== null){
+
+                    document.body.style[valorClasseBotoes] = valorEstiloLocalStorage;
+                }/*se o valor dentro de local storage não é null ou não é undefined, 
+                vou copiar o valor do localstorage dentro do documento 
+                em outra palavra por exemplo se a cor do fundo esta ja estocada no localstorage 
+                vou copiar ela no document. Document vai receber essa valor para definir o 
+                backgroundcolor*/
+
+
+                //console.log(buttons[i].className)
+                //console.log(valorClasseBotoes) // retorna os nomes das classes dos botoes que setei no localstorage
+                //console.log(valorEstiloLocalStorage)// retornou null
+                //console.log( document.body.style[valorClasseBotoes]) // retorna undefined
+            }
+
+
+            for(let i=0; i<buttons.length;i++){
+                //console.log(buttons[i]);
+
+                buttons[i].addEventListener('click',function(event){ 
+
+                let valorbotao = event.target.innerHTML; 
+                // Pega o valor do elemento que está recebendo o evento e coloca numa variável
+                
+                let valorClasseBotoes = buttons[i].className; 
+
+                localStorage.setItem(valorClasseBotoes,valorbotao);
+                // retorna  "key" = valoClasseBotoes;
+                //           "value"= valorbotao
+
+                    document.body.style[valorClasseBotoes] = valorbotao;
+
+                });
+               
+
+            }
+
+        }
+        
+// CÓDIGO AULA LUCAS
+            /*
+            let buttons = document.querySelectorAll("button");
+
+            for(let i=0;i<buttons.length;i++){
+                buttons[i].addEventListener("click", function(event){
+
+                let color = event.target.innerHTML;
+                localStorage.setItem("color",color)
+
+                document.body.style.background = color;
+                })
+
+            let color = localStorage.color;
+            if(color)document.body.style.backgroundColor = color;
+            // quando a página for carregada a cor estará lá
+            }*/
+       
+        
+    </script>
+</body>
+</html>
