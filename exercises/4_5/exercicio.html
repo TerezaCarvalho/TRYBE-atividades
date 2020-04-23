@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      
+    // 1-Adicione a tag h1 com o texto Exercício 4.5 - JavaScript DOM como filho da tag body;
+ 
+    let h1 = document.createElement("h1"); // cria a tag h1
+    h1.innerHTML = "Exercício 4.5 - JavaScript DOM"; // insere texto na tag criada
+    document.body.appendChild(h1); // anexa a tag h1 em body
+
+
+// 2-Adicione a tag div com a classe main-content como filho da tag body;
+
+      let div1= document.createElement("div");
+      div1.className = "main-content"; // adiciona classe
+      document.body.appendChild(div1); // anexa a tag div em body
+
+// 3-Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+
+      let div2= document.createElement('div');
+      div2.className = "center-content";
+      div1.appendChild(div2); // anexa a tag div2 como filha da tag div1
+
+// 4-Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+
+      let p1 = document.createElement('p');
+      p1.innerHTML = "Difícil mas não impossível";
+      div2.appendChild(p1); // pega o paragrafro criado e anexa a div2;
+
+// 5-Adicione uma tag div com a classe left-content como filho da tag div criada no passo 2;
+
+      let divleft = document.createElement("div");
+      divleft.className ="left-content";
+      div1.appendChild(divleft);  // pega a divleft e anexa a div1 como filha
+      
+// 6-Adicione uma tag div com a classe right-content como filho da tag div criada no passo 2;
+      let divright = document.createElement("div");
+      divright.className ="right-content";
+      div1.appendChild(divright); // pega a divright e anexa como filha à div1
+
+// 7-Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. 
+//Esse elemento deve ser filho do div criado no passo 5;
+
+      let img = document.createElement("img");
+      img.className="small-image";
+      img.src = "https://picsum.photos/200";
+      divleft.appendChild(img);    // anexa img como filha da divleft
+
+// 8-Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, 
+//um, dois, três, … como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+
+      let firstUl = document.createElement("ul"); // cria a lista não ordenada;
+     let vetor1 = [ "Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez" ]; // declara o vetor;
+      divright.appendChild(firstUl); // anexa ul em divright
+      for(let i=0; i<vetor1.length;i++){  // são mais de uma li, entao use o for para criá-las;
+        let li_ofFirstUl = document.createElement("li");  // cria elemento li da primeiraUl
+        li_ofFirstUl.innerHTML = vetor1[i]; //  preenche li com os numeros por extenso.
+        firstUl.appendChild(li_ofFirstUl); // anexa "AS LIs" na ul 
+      }
+      console.log(firstUl);
+
+//9-Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+
+      let h3 = [];  // para adicionar mais de uma tag faça um laço de repetição;
+
+      for( let i =0 ; i<3; i++){  
+           h3[i] = document.createElement("h3"); // cria h3 até a condiçao for falsa; h3[i] = h3
+          div1.appendChild(h3[i]);  // anexa "AS H3s" ã div1 enquanto i<3; lembrando que h3[i]=h3
+      }
+      
+      
+     // 10- Adicione a classe title na tag h1 criada;
+
+      h1.className="title";
+
+    // 11-Adicione a classe description nas 3 tags h3 criadas;
+
+    for( let i =0 ; i<3; i++){    // tem que ser na repetiçao.
+         h3[i].className = "description";
+      }
+
+    // 12-Remova o div criado no passo 5 (aquele que possui a classe left-content).
+    // Utilize a função .removeChild();
+
+      div1.removeChild(divleft);
+
+
+    // 13- Centralize o div criado no passo 6 (aquele que possui a classe right-content). 
+    //Dica: para centralizar, basta configurar o margin-right: auto do div;
+
+     divright.style.marginRight = "auto";
+
+    // 14-Troque a cor de fundo do elemento pai da div criada no passo 3 
+    //(aquela que possui a classe center-content) para a cor verde;
+
+    div2.parentElement.style.backgroundColor ="green";
+    //document.getElementsByClassName('main-content')[0].style.backgroundColor = "green"; = o elemento pai da 
+    //div2 é a div1 que tem a classe main content e está na posicao[0]
+
+    // 15- Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+
+      firstUl.removeChild(firstUl.lastElementChild);
+      firstUl.removeChild(firstUl.lastElementChild);
+
+
+    </script>
+  </body>
+</html>
