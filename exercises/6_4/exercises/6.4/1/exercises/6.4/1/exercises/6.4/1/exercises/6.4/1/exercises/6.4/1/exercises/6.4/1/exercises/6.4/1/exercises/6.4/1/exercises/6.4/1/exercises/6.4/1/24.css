@@ -1,7 +1,0 @@
-#pond {
-    display: flex;
-  flex-flow: column-reverse wrap;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  align-content: space-between;
-  }

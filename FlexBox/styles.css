@@ -48,8 +48,7 @@ posicionamento de itens flexíveis nos contêineres pai */
   }
 
 .header {
-    width: 900px;
-    height: 300px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;/*
