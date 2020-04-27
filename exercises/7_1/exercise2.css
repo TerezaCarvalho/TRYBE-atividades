@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    body{
+        font-size: larger;
+        margin: inherit;
+        padding: 10px;
+        background-color: ivory;
+       text-align: justify;
+    }
+
+   header p{
+    background-color: pink;
+   }
+
+   nav ul{
+       display: flex;
+       justify-content:space-between;
+       padding: 10px;
+   }
+
+   nav ul li{
+       color: blue;
+   }
+   h1{
+       font-size: 30px;
+   }
+
+   h2 {
+       padding: 9px;
+       font-weight: bold;
+       font-size: 25px;
+   }
+   h3{
+       margin-left: 9px;
+   }
+   
+   .aside-one{
+       display: flex;
+      flex-wrap: wrap;
+      padding: 15px;
+   }
+   .aside-one ul{
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       padding: 15px;
+     
+   }
+    .aside-two{
+        display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .aside-two ul{
+        display: flex;
+       justify-content: center;
+       flex-direction: column;
+    }
+    .main-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px; 
+    }
+
+    .main-content p{
+        padding: 15px;
+        text-align: justify;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer p{
+        padding: 5px;
+    }
+
+} 
+  /* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    
+  }
+
+  /* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    
+  }
