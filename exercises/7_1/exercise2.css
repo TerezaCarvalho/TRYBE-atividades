@@ -14,7 +14,7 @@ html {
         font-size: larger;
         margin: inherit;
         padding: 10px;
-        background-color: ivory;
+        background-color:plum;
        text-align: justify;
     }
 
@@ -95,6 +95,7 @@ html {
         margin: 10px;
         padding: 20px;
         text-align: justify;
+        background-color: salmon;
   }
   header{
       display: flex;
@@ -182,5 +183,113 @@ footer p{
 }
   /* Desktop Styles */
 @media only screen and (min-width: 961px) {
+    body{
+        margin: 20px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 25px;
+        background-color: wheat;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    header p{
+        font-size: xx-large;
+        font-weight:bolder;
+        color:brown;
+        text-align: center;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: first baseline;
+        padding: 10px;
+        color: green;
+    }
+
+    nav ul li{
+        list-style-type: none;
+        font-size: large;
+        padding: 10px;
+       
+    }
+
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
     
-  }
+    h2 {
+        padding: 15px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    h3{
+        margin-left: 9px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-one{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 7px;
+    }
+    .aside-one ul{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .aside-one ul li{
+        list-style-type: none;
+    }
+     .aside-two{
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+         text-align: center;
+     }
+     
+     .aside-two ul{
+         display: flex;
+        justify-content: center;
+        flex-direction: column;
+     }
+
+     .aside-two ul li{
+         list-style-type: none;
+     }
+
+     .main-content {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         padding: 15px; 
+     }
+ 
+     .main-content p{
+         padding: 15px;
+         text-align: justify;
+     }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+    footer p{
+        padding: 10px;
+    }
+
+}
