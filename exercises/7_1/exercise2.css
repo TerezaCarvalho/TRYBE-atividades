@@ -90,9 +90,96 @@ html {
 } 
   /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-    
+
+    body{
+        margin: 10px;
+        padding: 20px;
+        text-align: justify;
+  }
+  header{
+      display: flex;
+      flex-direction: column;
+      
+  }
+  header p{
+      font-size: xx-large;
+      font-weight:bolder;
+      color:brown;
+      text-align: center;
+  }
+  nav ul{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: 10px;
+      color: blue;
+  }
+  nav ul li{
+      list-style-type: none;
+      font-size: large;
+      padding: 7px;
+      background-color:gainsboro;
   }
 
+  h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    padding: 9px;
+    font-weight: bold;
+    font-size: 25px;
+}
+h3{
+    margin-left: 9px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.aside-one{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 7px;
+}
+.aside-one li{
+    list-style-type: none;
+}
+.aside-two{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 7px;
+}
+.aside-two li{
+    list-style-type: none;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px; 
+}
+
+.main-content p{
+    padding: 15px;
+    text-align: justify;
+    font-size: 23px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+footer p{
+    padding: 5px;
+}
+
+}
   /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     
