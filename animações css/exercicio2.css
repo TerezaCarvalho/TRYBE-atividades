@@ -1,0 +1,34 @@
+.container{
+    overflow: hidden;
+}
+
+/* FAZENDO O TEXTO */
+div {
+    animation-duration: 2s;
+    animation-name: bounceIn;
+  }
+  /*Sintaxe abreviada:
+
+div {
+  animation: bounceIn 2s;
+} 
+*/
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+    /*@keyframestem três estágios. No primeiro estágio (0%), o elemento está na opacidade 0 e reduz a 10% 
+    de seu tamanho padrão, usando a escala de transformação CSS. No segundo estágio, (60%)o elemento 
+    diminui para a opacidade total e cresce para 120% do seu tamanho padrão. Na fase final (100%), 
+    ele diminui um pouco e retorna ao tamanho padrão.*/
+  }
+   
