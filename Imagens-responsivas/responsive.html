@@ -11,16 +11,38 @@
     <div class='page'>
       <div class='section menu'></div>
       <div class='section header'>
-        <img src='images/header.svg'/>
+        <div class='photo'>
+          <picture>
+            <source media='(min-width: 401px)'
+                    srcset='images/photo-big.jpg'/>
+            <source media='(max-width: 400px)'
+                    srcset='images/photo-tall.jpg'/>
+            <img src='images/photo-small.jpg'/>
+          </picture>
+        </div>
       </div>
+      </div>
+      <!--
+        Os navegadores escalam automaticamente SVGs(imagens baseadas em vetores) para dispositivos retina, portanto, essa 
+        imagem SVG de 500 × 250 pixels será renderizada de forma mais nítida nos 
+        dispositivos padrão e retina.
+
       <div class='section content'>
-        <!--o SVG é um formato gráfico baseado em vetor, 
-          o que significa que pode ser ampliado ou reduzido para qualquer dimensão sem perda de qualidade.-->
-          <div class='illustration'>
-            <img src='images/illustration-big.png' style='max-width: 500px'/>
-          </div>
-        <!--As dimensões físicas de uma imagem são mais conteúdo do que apresentação, portanto, 
-          faz sentido que isso apareça no HTML e não na folha de estilo.-->
+        <img class='illustration' src='images/illustration.svg' />
+      </div>
+    -->
+      <div class='section content'>
+        <!--
+        <div class='illustration'>
+          <img src='images/illustration-big.png' style='max-width: 500px'/>
+        </div>
+      -->
+        <img src='illustration-small.png'
+          srcset='images/illustration-small.png 1x,
+               images/illustration-big.png 2x'
+          style='max-width: 500px'/>
+          <!--O 1xdiz ao navegador para exibir illustration-small.pngem telas de resolução padrão. O 2xmeio illustration-big.
+            pngé para telas de retina. Navegadores mais antigos que não entendem srcsetretornam ao srcatributo.-->
       </div>
       <div class='section sign-up'>
         <img src='images/sign-up.svg'/>
@@ -35,6 +57,9 @@
         <img src='images/feature.svg'/>
       </div>
     </div>
+    <footer>
+      <p>https://www.internetingishard.com/html-and-css/responsive-images/</p>
+    </footer>
   </body>
 </html>
-
+  

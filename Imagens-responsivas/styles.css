@@ -1,10 +1,3 @@
-/* Para tornar nossas imagens responsivas, agora precisamos levar três coisas em consideração:
-
-1-As dimensões do dispositivo
-2-As dimensões da imagem
-3-A resolução da tela do dispositivo
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +45,25 @@
 
 .feature-3 {
   background-color: #C8C6FA;
+}
+
+/*.illustration {
+  width: 100%;
+}*/
+.illustration img {
+  width: 100%;
+  display: block;
+}
+
+.header {
+  height: auto;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.photo img {
+  width: 100%;
+  display: block;
 }
 
 /* Mobile Styles */
